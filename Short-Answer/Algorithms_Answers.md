@@ -41,10 +41,6 @@ c) this is also O(n) or linear because as the size of n increases the number of 
 it takes 5 loops to get your answer, if n == 1000 it takes 1000 loops to get your answer
 
 ## Exercise II
-Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
-
-Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
-
 
 if the building is 10 stories high the egg wont be broken from the 6th floor
 if the building is 12 stories high the egg wont be broken from the 7th floor
@@ -53,6 +49,6 @@ if the building is 25 stories high the egg wont be broken from the 10th floor
 if the building is 100 stories high the egg wont be broken from the 20th floor
 f(n) = sqrt(n) * 2
 
-time complexity is O(sqrt(n))
+time complexity is O(1) since you dont need a loop to determine the highest floor to drop the egg from, you can simply just replace n with how many stories the building is and get your answer. Otherwise the runtime would be O(sqrt(n)) since if you isolate n from the rest of the equation your left with sqrt(n). So if for some reason you used a loop to determine which floor the egg could be dropped from and not crack, it would take the sqrt(n) iterations.
 
 
